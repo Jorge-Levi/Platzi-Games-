@@ -1,5 +1,12 @@
 -var titulo = "Titulos Principal2"
 -var titulos = ["TITULO PRINCIPAL","SUBTITULO 1", "SUBTITULO 2", "SUBTITULO 3"]
+-var usuario = "Levi"
+mixin caja(imagen,titulo,parrafo)
+    .caja
+        .caja__imagen: img(src="images/" + imagen, alt="imagen de ejemplo")
+        .caja__contenido 
+            h3 #{titulo}
+            p #{parrafo}
 
 doctype html
 html(lang="es")
@@ -12,7 +19,10 @@ html(lang="es")
     body
     header
         h1 PLATZIGAMES
-        a.boton REGISTRO
+        if usuario
+            a Hola #{usuario}
+        else
+            a.boton REGISTRAR
     section.intro
         .intro__imagen: img(src="images/imagen.png", alt="imagen de ejemplo")
         .intro__contenido
@@ -22,3 +32,7 @@ html(lang="es")
                 |Ipsum, perspiciatis adipisci, ad asperiores quod sit quibusdam ex commodi aspernatur nulla officia.
                 |Ducimus ut natus fuga, cupiditate consequuntur amet quibusdam quas.
             a.boton Leer Más
+    main.contenido
+        +caja("imagen.png",titulos[1],"Lorem ipsum, dolor sit amet consectetur adipisicing elit.")
+        +caja("imagen.png",titulos[2],"Lorem ipsum, dolor sit amet consectetur adipisicing elit.")
+        +caja("imagen.png",titulos[3],"Lorem ipsum, dolor sit amet consectetur adipisicing elit.")
