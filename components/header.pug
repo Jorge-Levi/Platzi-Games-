@@ -1,0 +1,20 @@
+-var titulo = "TITULO PRINCIPAL"
+-var subTitulos = ["SUBTITULO 1", "SUBTITULO 2", "SUBTITULO 3"]
+-var usuario = "Levi"
+mixin caja(imagen,titulo,parrafo)
+    .caja
+        .caja__imagen: img(src="images/" + imagen, alt="imagen de ejemplo")
+        .caja__contenido
+            h3 #{titulo}
+            p #{parrafo}
+doctype html
+html(lang="es")
+    include head.pug
+    body
+        header
+            h1 PLATZIGAMES
+            if usuario
+                a Hola #{usuario}
+            else
+                a.boton REGISTRAR
+    block contenido
