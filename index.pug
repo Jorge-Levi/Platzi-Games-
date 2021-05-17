@@ -1,3 +1,6 @@
+-var titulo = "Titulos Principal2"
+-var titulos = ["TITULO PRINCIPAL","SUBTITULO 1", "SUBTITULO 2", "SUBTITULO 3"]
+
 doctype html
 html(lang="es")
     head
@@ -12,10 +15,10 @@ html(lang="es")
         a.boton REGISTRO
     section.intro
         .intro__imagen: img(src="images/imagen.png", alt="imagen de ejemplo")
-        .intro__contenido 
-            h2 Titulo Principal 
+        .intro__contenido
+            h2 #{titulos[0]}
             p
-                |Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                |Ipsum, perspiciatis adipisci, ad asperiores quod sit quibusdam ex commodi aspernatur nulla officia. 
+                |Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                |Ipsum, perspiciatis adipisci, ad asperiores quod sit quibusdam ex commodi aspernatur nulla officia.
                 |Ducimus ut natus fuga, cupiditate consequuntur amet quibusdam quas.
             a.boton Leer Más
